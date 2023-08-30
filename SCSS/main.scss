@@ -1,5 +1,58 @@
-$primary-color:#2f2b2b;
-
+@import 'config';
+@import 'menu';
+*{
+    box-sizing: border-box;
+}
 body{
-    background: $primary-color;
+    @include background;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+h1,h2,h3{
+    margin: 0;
+    font-weight: bold;
+
+    &.lg-heading{
+        font-size: 4rem;
+    }
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+    }
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+main{
+    padding: 4rem;
+    height: 100%;
+
+    .social-icons{
+
+        margin-top: 1rem;
+
+        a{
+            padding:0.5rem;
+
+            &:hover{
+                color: $secondary-color;
+                @include fade();
+            }
+        }
+    }
+    &#home{
+        overflow: hidden;
+        h1{
+            margin-top: 20vh;
+        }
+    }
 }

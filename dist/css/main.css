@@ -20,6 +20,82 @@
     .toggle-btn.close .toggle-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.95;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu .left, .menu .right {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu .right {
+    margin: 0;
+    padding: 0;
+    background: url(../img/right2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu .right.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .left {
+    background: url(../img/left.png);
+    background-attachment: fixed;
+    background-size: cover;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu .left.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .left .logo {
+      width: 250px;
+      height: 250px;
+      background: url(../img/profile.jpg);
+      border-radius: 50%;
+      border: solid 3px aqua; }
+  .menu .nav-items {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-items.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-items.active > a {
+      color: aqua; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 22px;
+    padding: 0.8rem 0;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: aqua; }
+
+.nav-items:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-items:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-items:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-items:nth-child(4) {
+  transition-delay: 0.4s; }
+
+.nav-items:nth-child(5) {
+  transition-delay: 0.5s; }
+
 * {
   box-sizing: border-box; }
 
@@ -61,9 +137,24 @@ header {
   z-index: 2;
   width: 100%; }
 
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-15deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(15deg); } }
+
 main {
   padding: 4rem;
   height: 100%; }
+  main .waving-hand {
+    display: inline-block;
+    font-size: 50px;
+    animation: wave 1.9s infinite;
+    transform-origin: bottom; }
   main .social-icons {
     margin-top: 1rem; }
     main .social-icons a {

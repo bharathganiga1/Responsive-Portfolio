@@ -8,31 +8,53 @@
     main{
         align-items: center;
         text-align: center;
-    }
-    .menu >ul.right,
-    .menu > div.left{
-        float: none;
-        width: 100%;
-        min-height: 0;
 
-        .show{
-            transform: translate3d(0,0,0);
+        h1.lg-heading{
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 1rem;
         }
     }
-    .right{
-        height: 75vh;
-        transform: translate3d(-100%,0,0);
-        font-size: 24px;
+    .menu{
+        .right,
+        .right{
+            float: none;
+            width: 100%;
+            min-height: 0;
+            &.show{
+                transform: translate3d(0,0,0);
+            }
+        }
+        .right{
+            background:url(../img/bottom.png);
+            background-attachment: fixed;
+            background-size: cover;
+            height:75vh;
+            transform: translate3d(-100%,0,0);
+            font-size: 24px;
+        }
+        .left{
+            background:url(../img/top.png);
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 25vh;
+            transform: translate3d(100%,0,0);
+            .logo{
+                margin: 5px 0;
+                width: 150px;
+                height: 150px;
+                background: url(../img/profile_small.jpg);
+                background-position: center;
+            }
+        }
     }
+    
 }
 
-
 @include mediaSM{
-    main#home h1{
-        //margin-top: 10vh;
-        &.lg-heading{
-            font-size: 3rem;
-        }
-        
+    
+    main#home h1 {
+        margin-top: 15vh;
     }
 }

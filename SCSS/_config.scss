@@ -3,7 +3,7 @@ $primary-color:#12100e;
 $secondary-color:aqua;
 $show-img :true;
 $home-img:url(../img/background.jpg);
-$background-opacity:0.6;
+$background-opacity:0.3;
 
 @mixin fade{
     transition:all 0.5s ease-out;

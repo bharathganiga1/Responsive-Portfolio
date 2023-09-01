@@ -1,6 +1,6 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+
 *{
     box-sizing: border-box;
 }
@@ -12,18 +12,18 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
-h1,h2,h3{
-    margin: 0;
-    font-weight: bold;
+    h1,h2,h3{
+        margin: 0;
+        font-weight: bold;
 
-    &.lg-heading{
-        font-size: 4rem;
+        &.lg-heading{
+            font-size: 4rem;
+        }
+        &.sm-heading{
+            margin-bottom: 2rem;
+            padding: 0.2rem 1rem;
+        }
     }
-    &.sm-heading{
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-    }
-}
 a{
     color: #fff;
     text-decoration: none;
@@ -47,6 +47,7 @@ header{
       transform: rotate(15deg);
     }
   }
+  
 main{
     padding: 4rem;
     height: 100%;
@@ -54,7 +55,7 @@ main{
     .waving-hand {
         display: inline-block;
         font-size: 50px;
-        animation: wave 1.9s infinite;
+        animation: wave 2s infinite;
         transform-origin: bottom;
       }
 
@@ -78,3 +79,4 @@ main{
         }
     }
 }
+@import 'mobile';

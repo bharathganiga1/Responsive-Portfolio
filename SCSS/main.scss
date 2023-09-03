@@ -1,82 +1,67 @@
-@import 'config';
-@import 'menu';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-*{
-    box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    @include background;
-    color: #fff;
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
-}
-    h1,h2,h3{
-        margin: 0;
-        font-weight: bold;
 
-        &.lg-heading{
-            font-size: 4rem;
-        }
-        &.sm-heading{
-            margin-bottom: 2rem;
-            padding: 0.2rem 1rem;
-        }
-    }
-a{
-    color: #fff;
-    text-decoration: none;
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header{
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+
+body {
+  background: radial-gradient(
+    circle,
+    rgb(230, 152, 185) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
 }
-@keyframes wave {
-    0%, 100% {
-      transform: rotate(0deg);
+header {
+  width: 100%;
+  position: fixed;
+  top:10px;       
+
+  .container{
+    background-color: rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 4rem;
+    padding: 0 30px;
+    border-radius: 10px;
+
+    .logo{
+      padding: 10px;
+      font-size: 32px;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+      cursor:default;
     }
-    25% {
-      transform: rotate(-15deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    75% {
-      transform: rotate(15deg);
+    
+    .nav-bar{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      list-style-type: none;
+      
+      .nav{
+          font-weight: 600;
+          text-decoration: none;
+          margin:0 20px;
+          color: black;
+      }
     }
   }
-  
-main{
-    padding: 4rem;
-    height: 100%;
-
-    .waving-hand {
-        display: inline-block;
-        font-size: 50px;
-        animation: wave 2s infinite;
-        transform-origin: bottom;
-      }
-
-    .social-icons{
-
-        margin-top: 1rem;
-
-        a{
-            padding:0.5rem;
-
-            &:hover{
-                color: $secondary-color;
-                @include fade();
-            }
-        }
-    }
-    &#home{
-        overflow: hidden;
-        h1{
-            margin-top: 20vh;
-        }
-    }
 }
-@import 'mobile';
+
+
+
+
+
+
+

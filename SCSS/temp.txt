@@ -1,0 +1,150 @@
+<!-- main section -->
+    <main id="home">
+        <div class="home-left">
+            <h1 class="lg-heading">Hy All, I'm Bharath<span class="waving-hand">&#x1F44B;</span></h1>
+            <h2 class="sm-heading">"Byte by Byte, Crafting the Future 🛠️ | Engineer on a Keyboard | Dreamer after Dusk 🌙 | Exploring the Art of Algorithms and Logic"</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#"><i class="fab fa-stack-overflow fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="home-right">
+            
+        </div>
+    </main>
+
+
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+$primary-color:#12100e;
+$secondary-color:aqua;
+$show-img :true;
+$home-img: radial-gradient(
+    circle,
+    rgb(230, 152, 185) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+
+$home-imgM:url(../img/background_M.jpg);
+
+$background-opacity:0.3;
+
+
+
+@mixin fade{
+    transition:all 0.5s ease-out;
+}
+@mixin background{
+    @if $show-img{
+        &#bg-img{
+            background: $home-img;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    }
+}
+
+//Media queriess
+@mixin mediaSM{
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+@mixin mediaM{
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+@mixin mediaL{
+    @media screen and (min-width:769px) and  (max-width:1170px) {
+        @content;
+    }
+}
+@mixin mediaXL{
+    @media screen and (min-width:1171px) {
+        @content;
+    }
+}
+@import 'config';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    @include background;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins";
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+@keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } 
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } 
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+// main{
+//     padding: 4rem;
+//     height: 100%;
+
+//     .home-left{
+//         width: 50%;
+//         float: left;
+//     }
+//     .waving-hand {
+//         animation-name: wave; 
+//         animation-duration: 2.5s;
+//         animation-iteration-count: infinite;
+//         transform-origin: 70% 70%;
+//         display: inline-block;
+//       }
+
+//     .social-icons{
+
+//         margin-top: 1rem;
+
+//         a{
+//             padding:0.5rem;
+
+//             &:hover{
+//                 color: $secondary-color;
+//                 @include fade();
+//             }
+//         }
+//     }
+    
+// }

@@ -1,4 +1,7 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+@import 'config';
 
 html {
   scroll-behavior: smooth;
@@ -20,22 +23,22 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 header {
   width: 100%;
   position: fixed;
   top:10px;       
 
-  .container{
+  .nav-container{
     background-color: rgba(255,255,255,0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin:0 4rem;
-    padding: 0 30px;
+    padding: 15px 30px;
     border-radius: 10px;
 
     .logo{
-      padding: 10px;
       font-size: 32px;
       font-weight: bold;
       color: black;
@@ -45,22 +48,74 @@ header {
     
     .nav-bar{
       display: flex;
-      justify-content:space-between;
+      justify-content:space-around;
       align-items: center;
       list-style-type: none;
       
       .nav{
           font-weight: 600;
           text-decoration: none;
-          margin:0 20px;
+          margin:10px 10px;
           color: black;
+          transition: color 0.3s ease;
+          padding: 10px 5px;
+          &:hover,&.active{
+            background-color: hsla(0, 0%, 100%, 1);
+            border-radius: 1rem; 
+            transition:500ms ease; 
+          }
       }
     }
   }
 }
 
-
-
+.section{
+  margin:0 2rem;
+  padding:  15px 30px;
+  color: black;
+  background-color: rgba(255,255,255,0.1);
+  .home{
+    margin-top:85px;
+    padding:10px 20px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    .home-left{
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 40px;
+      h2{
+          font-size: 3rem;
+          color: black;
+          margin-bottom: 10px;
+      }
+      p{
+        font-size: 1.2rem;
+        color: black;
+        line-height: 2.25rem;
+      }
+    }
+    .home-right{
+      width: 500px;
+      height: 500px;
+      background:url('../img/right.png');
+      border-radius: 2rem;
+    }
+  }
+}
+.shake{
+  animation-name: wave; 
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
 
 
 

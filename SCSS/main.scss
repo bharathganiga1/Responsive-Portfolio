@@ -23,6 +23,28 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.shake{
+  animation-name: wave; 
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+.search{
+  animation-name: zoomInOut; 
+  animation-duration: 2.0s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+.h2-bg {
+  display: inline-block;
+  height: 12px;
+  background-color: rgb(124, 224, 224);
+  line-height: 0;
+}
+
+
 
 header {
   width: 100%;
@@ -73,8 +95,8 @@ header {
 .section{
   margin:0 2rem;
   padding:  15px 30px;
-  color: black;
   background-color: rgba(255,255,255,0.1);
+
   .home{
     margin-top:85px;
     padding:10px 20px;
@@ -110,35 +132,76 @@ header {
     }
   }
 }
-.shake{
-  animation-name: wave; 
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
+
 
 .contact{
+    margin-top: 20px;
+    text-align: center;
     padding:10px 20px;
     background: rgba(255,255,255,0.5);
     border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 
-    
-    .contact-right,.contact-left
-    {
-      height: 40%;
-      width: 50%;
-      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
-      border-radius: 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
-      margin: 40px 50px;
-      padding: 30px;
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
+    .contact-content {
+      display: flex;
+      justify-content: space-between;
+      padding:10px 20px;
+      gap: 20px;
+      .contact-left ,.contact-right {
+        width: 50%;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 10px 0;
+      }
+      .contact-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #f7f7f7;
+          .form {
+            text-align: left;
+            max-width: 400px; 
+            width: 100%;
+                .form-control {
+                      margin-bottom: 15px;
+                      label {
+                          display: block;
+                          font-weight: bold;
+                          margin-bottom: 5px;
+                      }
+                      input,
+                      textarea {
+                          width: 100%;
+                          padding: 10px;
+                          border: 1px solid #ccc;
+                          border-radius: 4px;
+                      }
+                      textarea {
+                        resize: none;
+                      }
+                      button {
+                        background-color: #007bff;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        &:hover {
+                          background-color: #0056b3;
+                      }
+                    }
+              
+        }
+      }
+    }
+  }
 
 }
 
